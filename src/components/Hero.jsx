@@ -79,7 +79,7 @@ const Hero = () => {
         >
           <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
             <img
-              src="public/image.png"
+              src="/image.png"
               alt="Profile"
               className="w-60 h-60 rounded-full object-cover"
             />
