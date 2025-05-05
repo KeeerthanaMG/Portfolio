@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -52,14 +52,14 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Social Links */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/KeeerthanaMG"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -67,7 +67,7 @@ const Footer = () => {
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/keerthana-m-g-12ba59256/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -75,15 +75,7 @@ const Footer = () => {
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <FaTwitter size={24} />
-              </a>
-              <a
-                href="https://medium.com"
+                href="https://medium.com/@keerthanamg19"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -96,7 +88,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} John Doe. All rights reserved.
+            © {new Date().getFullYear()} Keerthana M G. All rights reserved.
           </p>
         </div>
       </div>
