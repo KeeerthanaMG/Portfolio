@@ -1,6 +1,20 @@
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaReact, FaNodeJs, FaPython, FaJava, FaDocker } from 'react-icons/fa';
+import { SiTypescript, SiJavascript, SiMongodb, SiPostgresql } from 'react-icons/si';
+
+const floatingIcons = [
+  { Icon: FaReact, color: '#61DAFB', initialX: -20, initialY: -20 },
+  { Icon: FaNodeJs, color: '#339933', initialX: 20, initialY: -40 },
+  { Icon: SiTypescript, color: '#3178C6', initialX: -40, initialY: 20 },
+  { Icon: SiJavascript, color: '#F7DF1E', initialX: 40, initialY: 40 },
+  { Icon: FaPython, color: '#3776AB', initialX: -20, initialY: 40 },
+  { Icon: FaJava, color: '#007396', initialX: 30, initialY: -20 },
+  { Icon: SiMongodb, color: '#47A248', initialX: -30, initialY: -40 },
+  { Icon: SiPostgresql, color: '#336791', initialX: 40, initialY: 20 },
+  { Icon: FaDocker, color: '#2496ED', initialX: -40, initialY: -10 }
+
+];
 
 const Hero = () => {
   return (
@@ -61,15 +75,42 @@ const Hero = () => {
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 flex justify-center"
+          className="w-full lg:w-1/2 flex justify-center relative"
         >
           <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
             <img
-              src="public\image.png"
+              src="public/image.png"
               alt="Profile"
               className="w-60 h-60 rounded-full object-cover"
             />
           </div>
+          {floatingIcons.map(({ Icon, color, initialX, initialY }, index) => (
+            <motion.div
+              key={index}
+              className="absolute"
+              initial={{ x: initialX, y: initialY, opacity: 0 }}
+              animate={{
+                x: initialX,
+                y: initialY,
+                opacity: 1,
+                scale: [1, 1.2, 1],
+                rotate: [0, 10, -10, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "reverse",
+                delay: index * 0.2,
+              }}
+              style={{
+                color: color,
+                left: `${50 + initialX}%`,
+                top: `${50 + initialY}%`,
+              }}
+            >
+              <Icon size={24} />
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

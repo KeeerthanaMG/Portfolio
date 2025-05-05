@@ -22,7 +22,7 @@ const experiences = [
     points: [
       "Built a Node.js-based Asset Management System managing 1,000+ assets, reducing issue resolution time by 30%.",
       "Designed RESTful APIs with Express.js, collaborated with a 4-member team, and engaged with 5+ stakeholders to define backend workflows.",
-    ],
+    ], 
     icon: <FaBriefcase />,
   },
   {
